@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Shoe Shop</title>
+        <!-- Link to login.css -->
+        <link rel="stylesheet" 
+        href="../static/css/signup.css" />
+
+        <!-- Link to Box icons -->
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    </head>
+<body>
+    <!-- Form login-->
+    <div class="form-signup">
+        <div class="signup">
+            <h2>Đăng ký</h2>
+        </div>
+        <form action="">
+            <!-- name-->
+            <div class="fullname">
+                <i class='bx bx-user'></i>
+                <input type="text" name="fullName" id="fullName" placeholder="Nhập họ và tên">
+            </div>
+            <!-- phonenumber-->
+            <div class="phonenumber">
+                <i class='bx bx-phone'></i>
+                <input type="number" name="phonenumber" id="phoneNumber" placeholder="Nhập số điện thoại">
+            </div>
+            <!-- email -->
+            <div class="username">
+                <i class='bx bx-envelope' ></i>
+                <input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập">
+            </div>
+            <!-- password-->
+            <div class="password">
+                <i class='bx bx-lock-alt'></i>
+                <input type="text" name="password" id="password" placeholder="Nhập mật khẩu">
+                <input type="text" name="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+            </div>
+            <!-- address -->
+            <div class="address">
+                <i class='bx bx-home-alt-2'></i>
+                <input type="text" name="email" id="address" placeholder="Nhập địa chỉ">
+            </div>
+
+            <!-- address selector -->
+            <div class="address-selector">
+
+                <select name="ls_province" id="ls_province" class="ls_province"></select>
+            
+                <div class="district-ward">
+                    <select name="ls_district" id="ls_district" class="ls_district"></select>
+                    <select name="ls_ward" id="ls_ward" class="ls_ward"></select>
+                </div>
+            </div>
+            <!-- button signup now -->
+            <p class="warning" style="color: red;"></p>
+            <div class="btn">
+                <a id="signup" href="#">Đăng ký</a>
+            </div>
+            <a id="signup" href="./signin.html">Đã có tài khoản?</a>
+        </form>
+    </div>
+    <!-- Vietnam local selector: https://github.com/stommazh/vietnamlocalselector -->
+    <script src="../static/js/vietnamlocalselector.js"></script>
+
+    <!-- productdetail JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../static/js/signup.js"></script>
+    <script src="./signup.js"></script>
+</body>
+</html>

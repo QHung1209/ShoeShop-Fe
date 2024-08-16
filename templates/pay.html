@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Link to homepage.css -->
+  <link rel="stylesheet" href="../static/css/pay.css" />
+
+  <!-- Box icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+
+  <!-- Header section -->
+  <header>
+    <!-- Tra cứu đơn hàng -->
+    <!-- Giỏ hàng -->
+    <div class="content">
+      <a href="./cart.html" class="cart" id="cart"><i class='bx bx-cart-alt' class="cart" id="cart"></i> Giỏ hàng</a>
+    </div>
+    <!-- Đăng nhập -->
+    <div class="content">
+      <!--<a href="#"><i class='bx bx-user'></i> Đăng nhập</a>-->
+      <a href="#" class="account" id="account" onclick="toggleDropdown(event)"><i class='bx bx-user'></i> Tài Khoản</a>
+      <div id="myDropdown" class="dropdown-content">
+        <a class="user_account" href="./profile.html"></a>
+        <a href="#" id="logout">Đăng xuất</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar section -->
+  <section class="logo-and-navbar">
+    <a href="./homepage.html" class="logo"><img src="/src/main/resources/static/images/logogiay.jpg" style="width: 130px; height: 130px;" alt=""></a>
+
+    <ul class="navbar">
+      <li><a href="./productlist.html">SẢN PHẨM</a></li>
+      <li>
+        <p>|</p>
+      </li>
+      <li><a class="male" href="#" onclick="return false;">NAM</a></li>
+      <li>
+        <p>|</p>
+      </li>
+      <li><a class="female" href="#" onclick="return false;">NỮ</a></li>
+      <li>
+        <p>|</p>
+      </li>
+      <li><a class="sale" href="#" onclick="return false;">GIẢM GIÁ</a></li>
+    </ul>
+  </section>
+
+  <!-- Banner section-->
+  <section class="banner">
+    <div class="content">
+      <h2>Free Shipping với hóa đơn từ 900k</h2>
+      <form id="search-form">
+        <div class="search">
+          <i class='bx bx-search'></i>
+          <input type="text" id="search-input" placeholder="Search">
+        </div>
+      </form>
+    </div>
+
+    <!-- shipping information -->
+    <section class="shipping-information">
+
+      <div class="column1">
+        <div class="form-detail">
+          <p class="row1 title">
+            thông tin giao hàng
+          </p>
+          
+        <input class="info" type="text" name="cusName" id="cusNam" placeholder="  Họ tên" value="hehe">
+        <input class="info" type="text" name="cusNumber" id="cusNumber" placeholder="  Số điện thoại">
+        <input class="info" type="text" name="cusAddress" id="cusAddress" placeholder="  Địa chỉ">
+
+        <select name="ls_province" id="ls_province" class="ls_province"></select>
+
+        <div class="district-ward">
+          <select name="ls_district" id="ls_district" class="ls_district"></select>
+          <select name="ls_ward" id="ls_ward" class="ls_ward"></select>
+        </div>
+    
+        </div>
+
+        <div class="row2">
+          <!--<input type="checkbox" id="" class="ck">-->
+          <p>Cập nhật các thông tin mới nhất về chương trình từ chúng tôi</p>
+        </div>
+
+        <p class="row3 title">Phương Thức Giao Hàng</p>
+
+        <div class="row4">
+          <!--
+          <input type="checkbox" id="shipMethod" class="ck">-->
+          <p>Tốc độ tiêu chuẩn (từ 2-5 ngày làm viêc)</p>
+
+        </div>
+
+        <p class="row5 title">Phương Thức Thanh Toán</p>
+        <div class="row6">
+          <div class="subrow">
+            <!--<input type="checkbox" id="directPayment" class="ck">-->
+            <p>Thanh toán trực tiếp khi giao hàng</p>
+
+          </div>
+          <!--
+          <div class="subrow">
+            <input type="checkbox" id="onlinePayment" class="ck">
+            <p>Thanh toán bằng Thẻ quốc tế/ Thẻ nội địa/ QR Code </p>
+            
+          </div>
+          <div class="subrow">
+            <input type="checkbox" id="onlinePayment" class="ck">
+            <p>Thanh toán bằng ví MoMo </p>
+            
+          </div>-->
+
+        </div>
+
+      </div>
+
+      <div class="column2">
+        <div class="box">
+          <p class="row1">Đơn Hàng</p>
+
+          <div class="devider1">
+            <p></p>
+          </div>
+
+          <div class="list_product">
+            <!--
+            <div class="row2">
+              <p class="name">Vintas Public 2000s - Low Top - Insignia Blue</p>
+              <p class="price">620.000 VND</p>
+            </div>
+
+            <div class="row3">
+              <p class="size">Size: 37</p>
+              <p class="quantity">x 1</p>
+            </div>
+            -->
+          </div>
+
+
+          <div class="devider2">
+            <p></p>
+          </div>
+
+          <div class="price_detail">
+            <!--
+            <div class="row4">
+              <p class="order">Đơn hàng</p>
+              <p class="price">620.000 VND</p>
+            </div>
+
+            <div class="row5">
+              <p class="promo">Giảm</p>
+              <p class="price">-124.000 VND</p>
+            </div>
+
+            <div class="row6">
+              <p class="ship-fee">Phí vận chuyển</p>
+              <p class="price">0 VND</p>
+            </div>
+            -->
+          </div>
+
+
+          <div class="devider2">
+            <p></p>
+          </div>
+
+          <div class="row8">
+            <p class="total">Tổng cộng</p>
+            <p class="total_price" id="total_price"> </p>
+          </div>
+          <p class="warning" style="color: red; margin-bottom: 2%;"></p>
+          <a href="#" class="complete-payment" id="complete-payment" onclick="return false;">Hoàn tất đặt hàng</a>
+        </div>
+      </div>
+    </section>
+
+  <!-- footer section -->
+  <footer>
+    <div class="column company-name">
+      <p class="head">HUNG-Coporation</p>
+      <p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, laborum cum assumenda blanditiis nam omnis voluptatum. Assumenda alias, nobis iste repudiandae, impedit, exercitationem nihil ullam sit dicta voluptatem eligendi quaerat?</p>
+    </div>
+
+    <div class="column products">
+      <p class="head">Sản phẩm</p>
+      <ul>
+        <li><a href="#">Giày Nam</a></li>
+        <li><a href="#">Giày Nữ</a></li>
+        <li><a href="#">Thời trang & Phụ kiện</a></li>
+        <li><a href="#">Sale-off</a></li>
+      </ul>
+    </div>
+
+    <div class="column help">
+      <p class="head">Hỗ trợ</p>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#"> Bảo mật thông tin</a></li>
+        <li><a href="#">Chính sách chung</a></li>
+       
+      </ul>
+    </div>
+
+    <div class="column contact">
+      <p class="head">Liên hệ</p>
+      <ul>
+        <li>
+          <i class='bx bx-home-alt-2' ></i>
+          <p>UIT, Đg Hàn Thuyên, Khu Phố 6, Thủ Đức</p>
+        </li>
+        <li>
+          <i class='bx bx-envelope' ></i>
+          <p>hungcoporation@gmail.com</p>
+        </li>
+        <li>
+          <i class='bx bx-phone' ></i>
+          <p>0987 654 321</p>
+        </li>
+        <li class="social">
+          <i class='bx bxl-facebook-circle' ></i>
+          <i class='bx bxl-twitter' ></i>
+          <i class='bx bxl-google' ></i>
+          <i class='bx bxl-instagram-alt' ></i>
+        </li>
+      </ul>
+    </div>
+
+    <!-- footer section -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./order.js"></script>
+    <script src="../static/js/vietnamlocalselector.js"></script>
+
+    <!-- productdetail JS-->
+    <script src="../static/js/x.js"></script>
+    <script src="../static/js/pay.js"></script>
+
+</body>
+
+</html>
